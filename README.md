@@ -18,7 +18,7 @@ used gnome-terminal command to open new child terminal
 created by old .bashrc -> no LOCAL or HELLO created
 
 ### new terminal
-![Uploading image.png…]()
+![image](https://github.com/yasminEzF/Embedded-Linux/assets/109252157/9d764d59-963c-4d49-8e53-a8b01397b7d5)
 
 created by new .bashrc -> LOCAL & HELLO exist
 
