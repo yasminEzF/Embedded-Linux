@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [  "~/.bashrc" ];
+then
+	echo "exist"
+	echo "export HELLO=$HOSTNAME">>~/.bashrc
+	echo "LOCAL=$(whoami)">>~/.bashrc
+	gnome-terminal &
+fi
+
+
