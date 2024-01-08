@@ -24,13 +24,13 @@ avr-gcc -c Src/*.c -I Inc/
 ### 3. create static library
 
 ```bash
-avr-ar -rcs libmcal.a *.o 
+avr-ar --target=elf32-avr -rcs libmcal.a *.o 
 ```
 
 ### 4. compile and link application with library statically 
 
 ```bash
-avr-gcc App/main.c -L . -I ./Inc/ -lmcal -o app.elf -static
+avr-gcc -mmcu=atmega32 App/main.c -L . -I ./Inc/ -lmcal -o app.elf -static
 ```
 
 ## Application
