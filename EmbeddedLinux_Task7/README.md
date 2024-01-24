@@ -60,11 +60,25 @@ make
 
 machine name, sd image, u-boot path on local machine, no GUI
 sd.img needs to be 1024M not 1000 for qemu to work
+
 ```bash
 qemu-system-arm -machine vexpress-a9 -sd ~/bootloader/sd.img -kernel ~/u-boot/u-boot -nographic
 ```
 
+![Screenshot from 2024-01-24 11-30-57](https://github.com/yasminEzF/Embedded-Linux/assets/109252157/7b298b95-47a0-4d16-84c0-0af7da79083a)
+
 ### loading file from FAT to RAM
+
+viewing files on FAT partition
+
+```bash
+ls mmc 0:1
+```
+`mmc`: interface 
+`0`: block 0
+`1`: partition
+![Screenshot from 2024-01-24 11-32-07](https://github.com/yasminEzF/Embedded-Linux/assets/109252157/7f141e53-7438-40ad-8c19-245260903dc4)
+
 
 ```bash
 fatload mmc 0:1 0x60000000 binarySearch.elf
@@ -76,6 +90,8 @@ using `md` to display memory before and after loading
 md 0x60000000
 ```
 
+![Screenshot from 2024-01-24 11-35-58](https://github.com/yasminEzF/Embedded-Linux/assets/109252157/c44c51ae-776f-40b3-8bff-dba27a86fad5)
+
 ### for autoload without reconfiguring and building
 
 editing `bootcmd` variable to store `fatload` command to run through autoboot
@@ -84,5 +100,11 @@ editing `bootcmd` variable to store `fatload` command to run through autoboot
 setenv bootcmd "echo haiii; fatload mmc 0:1 0x60000000 binarySearch.elf
 saveenv
 ```
+
+![Screenshot from 2024-01-24 11-41-33](https://github.com/yasminEzF/Embedded-Linux/assets/109252157/a10f45fa-b027-4639-a0f1-13a0cc4744a8)
+
+restarting qemu for autoboot to load the file automatically
+
+![Screenshot from 2024-01-24 12-08-26](https://github.com/yasminEzF/Embedded-Linux/assets/109252157/b976774e-056d-466b-8a72-d98581950dfd)
 
 
