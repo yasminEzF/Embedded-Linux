@@ -37,19 +37,3 @@ Port_enumError_t portInit(void);
 
 #endif /* PORT_H_ */
 
-/*#if ((PORTS_NUM == PORT_A)||(PORTS_NUM == PORTS_A_B)||(PORTS_NUM == PORTS_A_B_C)||(PORTS_NUM == PORTS_A_B_C_D))
-            
-#endif
-
-#if ((PORTS_NUM == PORTS_A_B)||(PORTS_NUM == PORTS_A_B_C)||(PORTS_NUM == PORTS_A_B_C_D))
-
-#endif
-
-#if ((PORTS_NUM == PORTS_A_B_C)||(PORTS_NUM == PORTS_A_B_C_D))
-
-#endif
-
-#if (PORTS_NUM == PORTS_A_B_C_D)
-
-#endif
-*/

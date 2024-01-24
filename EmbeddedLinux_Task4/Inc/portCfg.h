@@ -10,7 +10,7 @@
 #define POST_COMPILE        1
 
 /*  pre compile configurations  */
-#define PORTS_NUM           PORTS_A_B_C/*number of ports to be used*/
+#define PORTS_NUM           PORTS_A_B_C_D/*number of ports to be used*/
 
 #define PORT_A              1
 #define PORTS_A_B           2
